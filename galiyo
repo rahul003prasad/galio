@@ -1,0 +1,2642 @@
+{
+	"info": {
+		"_postman_id": "447327c6-93a8-4430-92a0-a36cb6fc2897",
+		"name": "dsresnt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "Dev - Auth",
+					"item": [
+						{
+							"name": "register user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mobile\": \"7873160007\",\r\n    \"password\": \"mantu@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://34.212.202.44:49161/api/v1/auth/user",
+									"protocol": "http",
+									"host": [
+										"34",
+										"212",
+										"202",
+										"44"
+									],
+									"port": "49161",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNyIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA3IiwiaWQiOiI2NDFmNGI1MDk0MTk3NDFhZTE0Yzk4ODIiLCJpYXQiOjE2Nzk3NzI1MjEsImV4cCI6MTY3OTg1ODkyMSwiaXNzIjoiZHNyZW50In0.CmwhZu7G_rJWQ1gjOJfP0LaLp4Wxa8winQc89IOfRC4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://34.212.202.44:49161/api/v1/auth/user/profile",
+									"protocol": "http",
+									"host": [
+										"34",
+										"212",
+										"202",
+										"44"
+									],
+									"port": "49161",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"user",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mobile\": \"7873160006\",\r\n    \"password\": \"mantu@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://34.212.202.44:49161/api/v1/auth/user/login",
+									"protocol": "http",
+									"host": [
+										"34",
+										"212",
+										"202",
+										"44"
+									],
+									"port": "49161",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dev - Vehicle",
+					"item": [
+						{
+							"name": "Get Vehicles",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIiLCJwaG9uZU51bWJlciI6Ijc4NzMxNjAwMDYiLCJpZCI6IjY0MjA5OTY2N2UyZTEyM2RhYTkxY2E5OCIsImlhdCI6MTY3OTkxMDE3OCwiZXhwIjoxNjc5OTk2NTc4LCJpc3MiOiJkc3JlbnQifQ.oXqY1mhFVH3og8JfZ3ItJfHdr005odKA83RAz6612Bk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/vehicle",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"vehicle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Vehicle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIiLCJwaG9uZU51bWJlciI6Ijc4NzMxNjAwMDYiLCJpZCI6IjY0MjA5OTY2N2UyZTEyM2RhYTkxY2E5OCIsImlhdCI6MTY3OTkxMDE3OCwiZXhwIjoxNjc5OTk2NTc4LCJpc3MiOiJkc3JlbnQifQ.oXqY1mhFVH3og8JfZ3ItJfHdr005odKA83RAz6612Bk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"brand\" : \"Suzuki\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/vehicle/6420971f8eea2ae33e31f0e2",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"vehicle",
+										"6420971f8eea2ae33e31f0e2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Vehicle by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/vehicle/641f297083a53ab125014eca",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"vehicle",
+										"641f297083a53ab125014eca"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Vehicle by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/vehicle/641f297083a53ab125014eca",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"vehicle",
+										"641f297083a53ab125014eca"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Vehicle Images/Docs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2Nzk5MzY2ODEsImV4cCI6MTY4MDAyMzA4MSwiaXNzIjoiZHNyZW50In0.LbG3kTFx2mLBQsub4DETpo1i5XbZRS6vZnWUtfp0Iwk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9002/api/v1/vehicle/docs/6422752d2a66fce6be84d37a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"v1",
+										"vehicle",
+										"docs",
+										"6422752d2a66fce6be84d37a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Vehicle Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2Nzk5MzY2ODEsImV4cCI6MTY4MDAyMzA4MSwiaXNzIjoiZHNyZW50In0.LbG3kTFx2mLBQsub4DETpo1i5XbZRS6vZnWUtfp0Iwk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "brand",
+											"value": "Mercedese",
+											"type": "text"
+										},
+										{
+											"key": "yearmodel",
+											"value": "2023",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "#FFFFFF",
+											"type": "text"
+										},
+										{
+											"key": "numberplate",
+											"value": "UUSDJS898",
+											"type": "text"
+										},
+										{
+											"key": "chasisnumber",
+											"value": "8989899hhhh",
+											"type": "text"
+										},
+										{
+											"key": "serialnumber",
+											"value": "SER1211",
+											"type": "text"
+										},
+										{
+											"key": "vehicletype",
+											"value": "private",
+											"type": "text"
+										},
+										{
+											"key": "isLeased",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "serviceTypes",
+											"value": "LIMOUSINE",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "PAK",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "PAKISTAN",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "INDIA",
+											"type": "text"
+										},
+										{
+											"key": "postal",
+											"value": "787899",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "noOfSeats",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "carmodel",
+											"value": "A1",
+											"type": "text"
+										},
+										{
+											"key": "vehicle-imgs",
+											"type": "file",
+											"src": [
+												"/C:/Users/mantu/Downloads/new-sd.ms.drawio.png",
+												"/C:/Users/mantu/Downloads/orderupload.drawio (1).png",
+												"/C:/Users/mantu/Downloads/orderupload.drawio.png"
+											]
+										},
+										{
+											"key": "rc-docs",
+											"type": "file",
+											"src": [
+												"/C:/Users/mantu/Downloads/orderupload.drawio (1).png",
+												"/C:/Users/mantu/Downloads/orderupload.drawio.png",
+												"/C:/Users/mantu/Downloads/tables.drawio.png",
+												"/C:/Users/mantu/Downloads/MicrosoftTeams-image.png"
+											]
+										},
+										{
+											"key": "insurance-docs",
+											"type": "file",
+											"src": [
+												"/C:/Users/mantu/Downloads/orderupload.drawio (1).png",
+												"/C:/Users/mantu/Downloads/orderupload.drawio.png",
+												"/C:/Users/mantu/Downloads/forgot-password.drawio.png"
+											]
+										},
+										{
+											"key": "permit-docs",
+											"type": "file",
+											"src": [
+												"/C:/Users/mantu/Downloads/tables.drawio (1).png",
+												"/C:/Users/mantu/Downloads/tables.drawio.png"
+											]
+										},
+										{
+											"key": "other-docs",
+											"type": "file",
+											"src": [
+												"/C:/Users/mantu/Downloads/IMG-20221112-WA0000.jpg",
+												"/C:/Users/mantu/Downloads/WhatsApp Image 2022-07-16 at 9.03.58 PM.jpeg"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/vehicle",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"vehicle"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dev - Driver",
+					"item": [
+						{
+							"name": "Get Driver",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/driver",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"driver"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Driver",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/owner/641f274683a53ab125014ebe",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"owner",
+										"641f274683a53ab125014ebe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Driver By ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/driver/641f2de183a53ab125014edc",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"driver",
+										"641f2de183a53ab125014edc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Driver",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"userId\": \"641efe0bf59f3bbbc6d1a59e\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/owner/641f2de183a53ab125014edc",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"owner",
+										"641f2de183a53ab125014edc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Driver",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2Nzk5MzY2ODEsImV4cCI6MTY4MDAyMzA4MSwiaXNzIjoiZHNyZW50In0.LbG3kTFx2mLBQsub4DETpo1i5XbZRS6vZnWUtfp0Iwk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "driver-img",
+											"type": "file",
+											"src": "/C:/Users/mantu/OneDrive/Pictures/Capture.PNG"
+										},
+										{
+											"key": "firstname",
+											"value": "Drive r1",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "L1",
+											"type": "text"
+										},
+										{
+											"key": "dob",
+											"value": "03-27-1981",
+											"type": "text"
+										},
+										{
+											"key": "nationality",
+											"value": "UAE",
+											"type": "text"
+										},
+										{
+											"key": "nationalId",
+											"value": "UAE122112",
+											"type": "text"
+										},
+										{
+											"key": "nationalid_expiry_date",
+											"value": "2029",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "FEMALE",
+											"type": "text"
+										},
+										{
+											"key": "employmenttype",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "employeeId",
+											"value": "EMP111",
+											"type": "text"
+										},
+										{
+											"key": "drivinglicencetype",
+											"value": "Nothing",
+											"type": "text"
+										},
+										{
+											"key": "drivinglicencenumber",
+											"value": "LIC1121191",
+											"type": "text"
+										},
+										{
+											"key": "drivinglicencedoe",
+											"value": "2030",
+											"type": "text"
+										},
+										{
+											"key": "areaOfService",
+											"value": "Country",
+											"type": "text"
+										},
+										{
+											"key": "languages",
+											"value": "Urdu",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "\"\"",
+											"type": "text"
+										},
+										{
+											"key": "driver-docs",
+											"type": "file",
+											"src": [
+												"/C:/Users/mantu/Downloads/my_file-1646032927386-235296666.jpg",
+												"/C:/Users/mantu/Downloads/my_file-1645947878182-155858455.jpg"
+											]
+										},
+										{
+											"key": "driver-ids",
+											"type": "file",
+											"src": [
+												"/C:/Users/mantu/Downloads/tables.drawio.png",
+												"/C:/Users/mantu/Downloads/MicrosoftTeams-image.png"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/v1/driver",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"v1",
+										"driver"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dev - Owner",
+					"item": [
+						{
+							"name": "Get Owners",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/owner",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"owner"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Owner",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ownername\" : \"Mantu Pani\",\r\n    \"owneraddress\" : {\r\n        \"city\" : \"Bangalore\",\r\n        \"state\" : \"Karnataka\",\r\n        \"country\": \"INDIA\",\r\n        \"postalcode\" : \"560068\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/owner",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"owner"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Owner",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/owner/641f274683a53ab125014ebe",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"owner",
+										"641f274683a53ab125014ebe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Owner By ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/owner/641f29d183a53ab125014ece",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"owner",
+										"641f29d183a53ab125014ece"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Owner",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"owneraddress\" : {\r\n        \"postalcode\" : \"560067\",\r\n        \"city\": \"Bangalore\",\r\n        \"state\": \"Karnataka\",\r\n        \"country\": \"INDIA\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/owner/641f29d183a53ab125014ece",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"owner",
+										"641f29d183a53ab125014ece"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dev - Vehicle Category",
+					"item": [
+						{
+							"name": "Get Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/categories",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ownername\" : \"Mantu Pani\",\r\n    \"owneraddress\" : {\r\n        \"city\" : \"Bangalore\",\r\n        \"state\" : \"Karnataka\",\r\n        \"country\": \"INDIA\",\r\n        \"postalcode\" : \"560068\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/categories",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/categories/641f274683a53ab125014ebe",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"641f274683a53ab125014ebe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Category By ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/categories/641f29d183a53ab125014ece",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"641f29d183a53ab125014ece"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"owneraddress\" : {\r\n        \"postalcode\" : \"560067\",\r\n        \"city\": \"Bangalore\",\r\n        \"state\": \"Karnataka\",\r\n        \"country\": \"INDIA\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev-fleet}}/api/v1/categories/641f29d183a53ab125014ece",
+									"host": [
+										"{{dev-fleet}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"641f29d183a53ab125014ece"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile\": \"7873160006\",\r\n    \"password\": \"mantu@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-auth}}/api/v1/auth/user/login",
+							"host": [
+								"{{dev-auth}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile\": \"7873160005\",\r\n    \"password\": \"mantu@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-auth}}/api/v1/auth/user",
+							"host": [
+								"{{dev-auth}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFhMjNlZjRkZDgxZjE2YjZhMWZmYWMiLCJpYXQiOjE2Nzk0MzQ4NjksImV4cCI6MTY3OTUyMTI2OSwiaXNzIjoiZHNyZW50In0.L13NCbIc_P0H3f223DzxzICID_40JrLchwmlC0gP_dQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev-auth}}/api/v1/auth/user/profile",
+							"host": [
+								"{{dev-auth}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Local - APIS",
+			"item": [
+				{
+					"name": "Local - Core",
+					"item": [
+						{
+							"name": "Local - Core - Auth",
+							"item": [
+								{
+									"name": "Login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mobile\": \"7873160006\",\r\n    \"password\": \"Mantu@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{devurl-core}}/api/v1/auth/user/login",
+											"host": [
+												"{{devurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"auth",
+												"user",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Register",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mobile\": \"7873160006\",\r\n    \"password\" : \"Mantu@123\",\r\n    \"firstName\" : \"Mantu\",\r\n    \"lastName\" : \"Pani\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{devurl-core}}/api/v1/auth/user",
+											"host": [
+												"{{devurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"auth",
+												"user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Profile",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFudHUgUGFuaSIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDI5N2JmNjU3OTI2NDc4ZjBmNjUwOGUiLCJ1c2Vycm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNjgwNDQwMzEwLCJleHAiOjE2ODA1MjY3MTAsImlzcyI6ImRzcmVudCJ9.fLkhD7Y2pnyifp92GpOkUi1-0RhpAN1MSupWtNUPRWc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{devurl-core}}/api/v1/auth/user/profile",
+											"host": [
+												"{{devurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"auth",
+												"user",
+												"profile"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Register Fleet user by Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMDAwMDAwMDAwMCIsImRvYiI6IiIsInBob3RvIjpudWxsLCJjaXR5IjoiIiwibGljZW5zZU51bWJlciI6IiIsInBob25lTnVtYmVyIjoiMDAwMDAwMDAwMCIsImVtYWlsIjoiYWRtaW5AZHNyZW50LmNvbSIsImlkIjoiNjQyOTc4Mzg1NzkyNjQ3OGYwZjY1MDg2IiwidXNlcnJvbGUiOiJBRE1JTiIsImlhdCI6MTY4MDQ0MDk3NiwiZXhwIjoxNjgwNTI3Mzc2LCJpc3MiOiJkc3JlbnQifQ.6VAma6CM3yX-XhPxa8QS8qIOEQweaXS_MsGyTQKA5FM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mobile\": \"0000000001\",\r\n    \"firstName\": \"Fleet\",\r\n    \"lastName\" : \"User 5\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{devurl-core}}/api/v1/auth/user/fleet",
+											"host": [
+												"{{devurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"auth",
+												"user",
+												"fleet"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Forgot password",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\" : \"7873160010\",\r\n    \"password\" : \"User@123\",\r\n    \"confirmPassword\" : \"User@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl-core}}/api/v1/auth/user/forgot-password",
+											"host": [
+												"{{baseurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"auth",
+												"user",
+												"forgot-password"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset Password",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl-core}}/api/v1/auth/user/reset-password",
+											"host": [
+												"{{baseurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"auth",
+												"user",
+												"reset-password"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Local - Core - Clients",
+							"item": [
+								{
+									"name": "Get Client",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMDAwMDAwMDAwMCIsImRvYiI6IiIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAwIiwiZW1haWwiOiJhZG1pbkBkc3JlbnQuY29tIiwiaWQiOiI2NDI1ZTM0OTg3ZjgxZWRmZmNlZDBlNTgiLCJ1c2Vycm9sZSI6IkFETUlOIiwiaWF0IjoxNjgwMjA3ODgzLCJleHAiOjE2ODAyOTQyODMsImlzcyI6ImRzcmVudCJ9.Xuk4YRV9yAHm5x7JeHzvbZrO1AV2DNljDNqtCxHRJ1M",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9003/api/v1/clients",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9003",
+											"path": [
+												"api",
+												"v1",
+												"clients"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Clients",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMDAwMDAwMDAwMCIsImRvYiI6IiIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAwIiwiZW1haWwiOiJhZG1pbkBkc3JlbnQuY29tIiwiaWQiOiI2NDI1ZTM0OTg3ZjgxZWRmZmNlZDBlNTgiLCJ1c2Vycm9sZSI6IkFETUlOIiwiaWF0IjoxNjgwMjA3ODgzLCJleHAiOjE2ODAyOTQyODMsImlzcyI6ImRzcmVudCJ9.Xuk4YRV9yAHm5x7JeHzvbZrO1AV2DNljDNqtCxHRJ1M",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"operations\" : [\"POST\", \"PUT\", \"GET\", \"DELETE\"]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9003/api/v1/clients",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9003",
+											"path": [
+												"api",
+												"v1",
+												"clients"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove Driver Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:49162/api/v1/owner/641f274683a53ab125014ebe",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												"641f274683a53ab125014ebe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Driver By ID Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2Nzk5MzY2ODEsImV4cCI6MTY4MDAyMzA4MSwiaXNzIjoiZHNyZW50In0.LbG3kTFx2mLBQsub4DETpo1i5XbZRS6vZnWUtfp0Iwk",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9002/api/v1/driver/6422650e55a928582510eb56",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9002",
+											"path": [
+												"api",
+												"v1",
+												"driver",
+												"6422650e55a928582510eb56"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Driver Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"userId\": \"641efe0bf59f3bbbc6d1a59e\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:49162/api/v1/driver/641f2de183a53ab125014edc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"driver",
+												"641f2de183a53ab125014edc"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Local - Core - Fleet",
+							"item": [
+								{
+									"name": "Create Fleet or Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2ODAxMTc5MDcsImV4cCI6MTY4MDIwNDMwNywiaXNzIjoiZHNyZW50In0.yTWfd6OYwlOu8stWyPYnUt5WlwqqZWfAsRVx10r2mVk",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mobile\" :\"9092392049\",\r\n    \"fName\" :\"Fleet\",\r\n    \"lName\" : \"User\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9003/api/v1/admins",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9003",
+											"path": [
+												"api",
+												"v1",
+												"admins"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Local - Core - Customer",
+							"item": [
+								{
+									"name": "Get Customers",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFudHUgUGFuaSIsImRvYiI6IiAiLCJjaXR5IjoiIiwibGljZW5zZU51bWJlciI6IiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAxMCIsImlkIjoiNjQyOTI0MTYxZjE2ZWMzODk4MWMxNDJmIiwidXNlcnJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTY4MDQzNjEzOSwiZXhwIjoxNjgwNTIyNTM5LCJpc3MiOiJkc3JlbnQifQ.xhdlGIMipLRHii7QvrByWP4KXvO4p3hm264RoGVzbWc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl-core}}/api/v1/customer",
+											"host": [
+												"{{baseurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Customer",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFudHUgUGFuaSIsImRvYiI6IiAiLCJjaXR5IjoiIiwibGljZW5zZU51bWJlciI6IiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAxMCIsImlkIjoiNjQyOTI0MTYxZjE2ZWMzODk4MWMxNDJmIiwidXNlcnJvbGUiOiJDVVNUT01FUiIsImlhdCI6MTY4MDQzNjEzOSwiZXhwIjoxNjgwNTIyNTM5LCJpc3MiOiJkc3JlbnQifQ.xhdlGIMipLRHii7QvrByWP4KXvO4p3hm264RoGVzbWc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "firstName",
+													"value": "Mantu",
+													"type": "text"
+												},
+												{
+													"key": "lastName",
+													"value": "Pani",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "Bangalore",
+													"type": "text"
+												},
+												{
+													"key": "state",
+													"value": "Karnataka",
+													"type": "text"
+												},
+												{
+													"key": "country",
+													"value": "India",
+													"type": "text"
+												},
+												{
+													"key": "profile-img",
+													"type": "file",
+													"src": "/C:/Users/mantu/Downloads/vehicle-imgs-06eb7cb4-932e-47ee-a2e3-ac20b840e044.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{devurl-core}}/api/v1/customer/642924161f16ec38981c1431",
+											"host": [
+												"{{devurl-core}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"642924161f16ec38981c1431"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Local - Fleet",
+					"item": [
+						{
+							"name": "Local - Fleet - Vehicle",
+							"item": [
+								{
+									"name": "Get Vehicles",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "http://34.212.202.44:49162",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://34.212.202.44:49162/api/v1/vehicle",
+											"protocol": "http",
+											"host": [
+												"34",
+												"212",
+												"202",
+												"44"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"vehicle"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Vehicle",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmxlZXQgVXNlciA1IiwicGhvdG8iOiJodHRwczovL2RzcmVudC1kcHMuczMuYW1hem9uYXdzLmNvbS9wcm9maWxlLyUyMD9BV1NBY2Nlc3NLZXlJZD1BS0lBM1RBNkpTUFJLQkEyUkE3MyZFeHBpcmVzPTE2ODA0NDEzNjQmU2lnbmF0dXJlPWdPUkVmQmxTalFRc2tZSld6NzJEOE1SeUcxYyUzRCIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAxIiwiaWQiOiI2NDI5N2VhNzU3OTI2NDc4ZjBmNjUwOTUiLCJ1c2Vycm9sZSI6IkZMRUVUIiwiaWF0IjoxNjgwNDQxMDY0LCJleHAiOjE2ODA1Mjc0NjQsImlzcyI6ImRzcmVudCJ9.qav3DUQtEYRkV-JQFdQnjAoTduHoQSHyEqpRcIi3yuI",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "brand",
+													"value": "CIA",
+													"type": "text"
+												},
+												{
+													"key": "yearmodel",
+													"value": "2023",
+													"type": "text"
+												},
+												{
+													"key": "color",
+													"value": "#FFFFFF",
+													"type": "text"
+												},
+												{
+													"key": "numberplate",
+													"value": "UUSDJS89899123",
+													"type": "text"
+												},
+												{
+													"key": "chasisnumber",
+													"value": "89898990909-123",
+													"type": "text"
+												},
+												{
+													"key": "serialnumber",
+													"value": "SER121112",
+													"type": "text"
+												},
+												{
+													"key": "vehicletype",
+													"value": "private",
+													"type": "text"
+												},
+												{
+													"key": "isLeased",
+													"value": "false",
+													"type": "text"
+												},
+												{
+													"key": "serviceTypes",
+													"value": "LIMOUSINE",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "city",
+													"type": "text"
+												},
+												{
+													"key": "latitude",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "longitude",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "state",
+													"value": "state 2",
+													"type": "text"
+												},
+												{
+													"key": "country",
+													"value": "INDIA",
+													"type": "text"
+												},
+												{
+													"key": "postal",
+													"value": "787892",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "noOfSeats",
+													"value": "7",
+													"type": "text"
+												},
+												{
+													"key": "carmodel",
+													"value": "Carens",
+													"type": "text"
+												},
+												{
+													"key": "vehicle-imgs",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "rc-docs",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "insurance-docs",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "permit-docs",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "other-docs",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "category",
+													"value": "SUV",
+													"type": "text"
+												},
+												{
+													"key": "",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{devurl-fleet}}/api/v1/vehicle",
+											"host": [
+												"{{devurl-fleet}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"vehicle"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Vehicle",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"leaserdetails\": { \r\n        \"ownerid\": \"641f29d183a53ab125014ece\" \r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:49162/api/v1/vehicle/641f297083a53ab125014eca",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"vehicle",
+												"641f297083a53ab125014eca"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Vehicle by ID",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2Nzk5MzY2ODEsImV4cCI6MTY4MDAyMzA4MSwiaXNzIjoiZHNyZW50In0.LbG3kTFx2mLBQsub4DETpo1i5XbZRS6vZnWUtfp0Iwk",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9002/api/v1/vehicle/642274232a66fce6be84d377",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9002",
+											"path": [
+												"api",
+												"v1",
+												"vehicle",
+												"642274232a66fce6be84d377"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Vehicle by ID",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:49162/api/v1/vehicle/641f297083a53ab125014eca",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"vehicle",
+												"641f297083a53ab125014eca"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Vehicle Images/Docs",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2Nzk5MzY2ODEsImV4cCI6MTY4MDAyMzA4MSwiaXNzIjoiZHNyZW50In0.LbG3kTFx2mLBQsub4DETpo1i5XbZRS6vZnWUtfp0Iwk",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{dev-fleet}}/api/v1/vehicle/docs/6422752d2a66fce6be84d37a",
+											"host": [
+												"{{dev-fleet}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"vehicle",
+												"docs",
+												"6422752d2a66fce6be84d37a"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Local - Fleet - Driver",
+							"item": [
+								{
+									"name": "Get Driver",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmxlZXQgVXNlciIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAxIiwiaWQiOiI2NDI3MWY3Y2Q4NWExZmY3YjIzMmY2ZjAiLCJ1c2Vycm9sZSI6IkZMRUVUIiwiaWF0IjoxNjgwMjk2NTkwLCJleHAiOjE2ODAzODI5OTAsImlzcyI6ImRzcmVudCJ9.LneRhOrv1mhYJkZiOI5HxeMKRkDwKA_pVfQB7L7mpyg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://34.212.202.44:49162/api/v1/driver",
+											"protocol": "http",
+											"host": [
+												"34",
+												"212",
+												"202",
+												"44"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"driver"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Driver",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmxlZXQgVXNlciIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAxIiwiaWQiOiI2NDI3MWY3Y2Q4NWExZmY3YjIzMmY2ZjAiLCJ1c2Vycm9sZSI6IkZMRUVUIiwiaWF0IjoxNjgwMjk2NTkwLCJleHAiOjE2ODAzODI5OTAsImlzcyI6ImRzcmVudCJ9.LneRhOrv1mhYJkZiOI5HxeMKRkDwKA_pVfQB7L7mpyg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "driver-img",
+													"type": "file",
+													"src": "/C:/Users/mantu/Downloads/vehicle-imgs-06eb7cb4-932e-47ee-a2e3-ac20b840e044.png"
+												},
+												{
+													"key": "firstName",
+													"value": "Drive r1",
+													"type": "text"
+												},
+												{
+													"key": "lastName",
+													"value": "L1",
+													"type": "text"
+												},
+												{
+													"key": "dob",
+													"value": "03-27-1981",
+													"type": "text"
+												},
+												{
+													"key": "nationality",
+													"value": "UAE",
+													"type": "text"
+												},
+												{
+													"key": "nationalId",
+													"value": "UAE122112",
+													"type": "text"
+												},
+												{
+													"key": "nationalid_expiry_date",
+													"value": "2029",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "FEMALE",
+													"type": "text"
+												},
+												{
+													"key": "employmenttype",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "employeeId",
+													"value": "EMP111",
+													"type": "text"
+												},
+												{
+													"key": "drivinglicencetype",
+													"value": "Nothing",
+													"type": "text"
+												},
+												{
+													"key": "drivinglicencenumber",
+													"value": "LIC1121191",
+													"type": "text"
+												},
+												{
+													"key": "drivinglicencedoe",
+													"value": "2030",
+													"type": "text"
+												},
+												{
+													"key": "areaOfService",
+													"value": "Country",
+													"type": "text"
+												},
+												{
+													"key": "languages",
+													"value": "Urdu",
+													"type": "text"
+												},
+												{
+													"key": "userId",
+													"value": "\"\"",
+													"type": "text"
+												},
+												{
+													"key": "driver-docs",
+													"type": "file",
+													"src": "/C:/Users/mantu/Downloads/Untitled-2023-03-22-2242.png"
+												},
+												{
+													"key": "driver-ids",
+													"type": "file",
+													"src": [
+														"/C:/Users/mantu/Downloads/new-sd.ms.drawio.png",
+														"/C:/Users/mantu/Downloads/orderupload.drawio (1).png"
+													]
+												},
+												{
+													"key": "mobile",
+													"value": "9099929295",
+													"type": "text"
+												},
+												{
+													"key": "userrole",
+													"value": "DRIVER",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://34.212.202.44:49162/api/v1/driver",
+											"protocol": "http",
+											"host": [
+												"34",
+												"212",
+												"202",
+												"44"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"driver"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove Driver",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:49162/api/v1/owner/641f274683a53ab125014ebe",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												"641f274683a53ab125014ebe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Driver By ID",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsImRvYiI6IiAiLCJwaG90byI6IiAiLCJjaXR5IjoiICIsImxpY2Vuc2VOdW1iZXIiOiIgIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDFmNDY2NjgwMjBlMmQxMGJiYzhjYWQiLCJpYXQiOjE2Nzk5MzY2ODEsImV4cCI6MTY4MDAyMzA4MSwiaXNzIjoiZHNyZW50In0.LbG3kTFx2mLBQsub4DETpo1i5XbZRS6vZnWUtfp0Iwk",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9002/api/v1/driver/6422650e55a928582510eb56",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9002",
+											"path": [
+												"api",
+												"v1",
+												"driver",
+												"6422650e55a928582510eb56"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Driver",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"userId\": \"641efe0bf59f3bbbc6d1a59e\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:49162/api/v1/driver/641f2de183a53ab125014edc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"driver",
+												"641f2de183a53ab125014edc"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Local - Fleet - Owner",
+							"item": [
+								{
+									"name": "Get Owners",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmxlZXQgVXNlciIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAxIiwiaWQiOiI2NDI3MWY3Y2Q4NWExZmY3YjIzMmY2ZjAiLCJ1c2Vycm9sZSI6IkZMRUVUIiwiaWF0IjoxNjgwMjk3NjMzLCJleHAiOjE2ODAzODQwMzMsImlzcyI6ImRzcmVudCJ9.IDuGg08wXBdo22OkkxDDTvllQRYJ0YNIhPx-iBn-I64",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://34.212.202.44:49162/api/v1/owner",
+											"protocol": "http",
+											"host": [
+												"34",
+												"212",
+												"202",
+												"44"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"owner"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Owner",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmxlZXQgVXNlciIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAxIiwiaWQiOiI2NDI3MWY3Y2Q4NWExZmY3YjIzMmY2ZjAiLCJ1c2Vycm9sZSI6IkZMRUVUIiwiaWF0IjoxNjgwMjk3NjMzLCJleHAiOjE2ODAzODQwMzMsImlzcyI6ImRzcmVudCJ9.IDuGg08wXBdo22OkkxDDTvllQRYJ0YNIhPx-iBn-I64",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"ownername\" : \"Rahul ABC\",\r\n    \"owneraddress\" : {\r\n        \"city\" : \"Bangalore\",\r\n        \"state\" : \"Karnataka\",\r\n        \"country\": \"INDIA\",\r\n        \"postalcode\" : \"560068\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://34.212.202.44:49162/api/v1/owner",
+											"protocol": "http",
+											"host": [
+												"34",
+												"212",
+												"202",
+												"44"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"owner"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove Owner",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:49162/api/v1/owner/641f274683a53ab125014ebe",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												"641f274683a53ab125014ebe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Owner By ID",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmxlZXQgVXNlciIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiIwMDAwMDAwMDAxIiwiaWQiOiI2NDI1ZmFiNzdlY2MxNWFmMzBiZGJlMzUiLCJ1c2Vycm9sZSI6IkZMRUVUIiwiaWF0IjoxNjgwMjEyMDEwLCJleHAiOjE2ODAyOTg0MTAsImlzcyI6ImRzcmVudCJ9.kwnLTqhHotiM7NR-BhPRHPvCXgH0ihrcEiCJnxiVG34",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9002/api/v1/owner/642733bae2ff573101272365",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9002",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												"642733bae2ff573101272365"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Owner",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNzg3MzE2MDAwNiIsInBob25lTnVtYmVyIjoiNzg3MzE2MDAwNiIsImlkIjoiNjQxZWZlMGJmNTlmM2JiYmM2ZDFhNTllIiwiaWF0IjoxNjc5NzUyODM1LCJleHAiOjE2Nzk4MzkyMzUsImlzcyI6ImRzcmVudCJ9.vaOaXpAd-temHOgcLX8-gK6tScYibtv2VaZSEs_HoMo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"owneraddress\" : {\r\n        \"postalcode\" : \"560067\",\r\n        \"city\": \"Bangalore\",\r\n        \"state\": \"Karnataka\",\r\n        \"country\": \"INDIA\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:49162/api/v1/owner/641f29d183a53ab125014ece",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "49162",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												"641f29d183a53ab125014ece"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Local - Customer",
+					"item": [
+						{
+							"name": "Local - Customer -Vehcile",
+							"item": [
+								{
+									"name": "Get Vehicles",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFudHUgUGFuaSIsImRvYiI6IiAiLCJwaG90byI6Imh0dHBzOi8vZHNyZW50LWRwcy5zMy5hbWF6b25hd3MuY29tL3Byb2ZpbGUvJTIwP0FXU0FjY2Vzc0tleUlkPUFLSUEzVEE2SlNQUktCQTJSQTczJkV4cGlyZXM9MTY4MDQ0MTgxNSZTaWduYXR1cmU9MkMxT3JjY3JuRHZkc0k3RiUyQiUyQmlwNklvVUg5dyUzRCIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDI5N2JmNjU3OTI2NDc4ZjBmNjUwOGUiLCJ1c2Vycm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNjgwNDQxNTE1LCJleHAiOjE2ODA1Mjc5MTUsImlzcyI6ImRzcmVudCJ9.PQGbLgh9j6_nHRzgfkvdOETOWUb7WWCpeZu_qE21YGc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{devurl-customer}}/api/v1/vehicle",
+											"host": [
+												"{{devurl-customer}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"vehicle"
+											],
+											"query": [
+												{
+													"key": "brand",
+													"value": "Maruti",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Local - Customer - Trips",
+							"item": [
+								{
+									"name": "Create trip",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFudHUgUGFuaSIsImRvYiI6IiAiLCJwaG90byI6Imh0dHBzOi8vZHNyZW50LWRwcy5zMy5hbWF6b25hd3MuY29tL3Byb2ZpbGUvJTIwP0FXU0FjY2Vzc0tleUlkPUFLSUEzVEE2SlNQUktCQTJSQTczJkV4cGlyZXM9MTY4MDQ0MTgxNSZTaWduYXR1cmU9MkMxT3JjY3JuRHZkc0k3RiUyQiUyQmlwNklvVUg5dyUzRCIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDI5N2JmNjU3OTI2NDc4ZjBmNjUwOGUiLCJ1c2Vycm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNjgwNDQxNTE1LCJleHAiOjE2ODA1Mjc5MTUsImlzcyI6ImRzcmVudCJ9.PQGbLgh9j6_nHRzgfkvdOETOWUb7WWCpeZu_qE21YGc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"vehicleId\": \"64297f19f98f71eb1efc660e\",\r\n    \"serviceType\": \"Daily\",\r\n    \"service\" : \"RENTAL\",\r\n    \"pickuptime\" : \"04/02/2023\",\r\n    \"droptime\" : \"\",\r\n    \"pickuplocation\" : {\r\n        \"location\" : \"Madiwala\"\r\n    },\r\n    \"droplocation\" : {\r\n        \"location\" : \"Maratahali\"\r\n    },\r\n    \"city\" : \" \",\r\n    \"noOfHours\" : 0,\r\n    \"flightNumber\" : \"FL123\",\r\n    \"noOfGuests\" : 3,\r\n    \"hotelNumber\" : \" \",\r\n    \"noOfLaugages\" : 3,\r\n    \"totalKm\" : 10,\r\n    \"totalPrice\" : 500,\r\n    \"operationRoom\" : \" \",\r\n    \"rentalBranch\" : \"\",\r\n    \"tripCancelledBy\" : \" \",\r\n    \"tripStatus\" : \"PENDING\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{devurl-customer}}/api/v1/trips",
+											"host": [
+												"{{devurl-customer}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"trips"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Trips",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFudHUgUGFuaSIsImRvYiI6IiAiLCJwaG90byI6Imh0dHBzOi8vZHNyZW50LWRwcy5zMy5hbWF6b25hd3MuY29tL3Byb2ZpbGUvJTIwP0FXU0FjY2Vzc0tleUlkPUFLSUEzVEE2SlNQUktCQTJSQTczJkV4cGlyZXM9MTY4MDQ0MTgxNSZTaWduYXR1cmU9MkMxT3JjY3JuRHZkc0k3RiUyQiUyQmlwNklvVUg5dyUzRCIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDI5N2JmNjU3OTI2NDc4ZjBmNjUwOGUiLCJ1c2Vycm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNjgwNDQxNTE1LCJleHAiOjE2ODA1Mjc5MTUsImlzcyI6ImRzcmVudCJ9.PQGbLgh9j6_nHRzgfkvdOETOWUb7WWCpeZu_qE21YGc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{devurl-customer}}/api/v1/trips/me",
+											"host": [
+												"{{devurl-customer}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"trips",
+												"me"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get trips by ID",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFudHUgUGFuaSIsImRvYiI6IiAiLCJwaG90byI6Imh0dHBzOi8vZHNyZW50LWRwcy5zMy5hbWF6b25hd3MuY29tL3Byb2ZpbGUvJTIwP0FXU0FjY2Vzc0tleUlkPUFLSUEzVEE2SlNQUktCQTJSQTczJkV4cGlyZXM9MTY4MDQ0MTgxNSZTaWduYXR1cmU9MkMxT3JjY3JuRHZkc0k3RiUyQiUyQmlwNklvVUg5dyUzRCIsImNpdHkiOiIiLCJsaWNlbnNlTnVtYmVyIjoiIiwicGhvbmVOdW1iZXIiOiI3ODczMTYwMDA2IiwiaWQiOiI2NDI5N2JmNjU3OTI2NDc4ZjBmNjUwOGUiLCJ1c2Vycm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNjgwNDQxNTE1LCJleHAiOjE2ODA1Mjc5MTUsImlzcyI6ImRzcmVudCJ9.PQGbLgh9j6_nHRzgfkvdOETOWUb7WWCpeZu_qE21YGc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{devurl-customer}}/api/v1/trips/6429815904419ae3eecb4bf6",
+											"host": [
+												"{{devurl-customer}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"trips",
+												"6429815904419ae3eecb4bf6"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Local - Driver",
+					"item": []
+				}
+			]
+		}
+	]
+}
